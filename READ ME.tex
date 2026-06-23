@@ -1,0 +1,57 @@
+Data and code for drywell MAR oxygen transport simulations
+
+This repository contains HYDRUS model files, simulation outputs, mesh files, and Python plotting scripts used for the manuscript:
+
+Coupled Hydraulic and Biogeochemical Drivers of Oxygen Transport in the Vadose Zone During MAR Drywell Injection
+
+Folder structure
+
+The repository is organized as follows:
+
+Zhao_MAR_WRR_2026/
+├── 4d-6d/
+├── 6d-4d/
+├── 9d-1d/
+└── Plots code/
+
+The folders 4d-6d/, 6d-4d/, and 9d-1d/ contain HYDRUS model files and outputs for the three wetting-draining schedules evaluated in the manuscript:
+
+4d-6d/: 4-day wetting and 6-day draining schedule
+6d-4d/: 6-day wetting and 4-day draining schedule
+9d-1d/: 9-day wetting and 1-day draining schedule
+
+The folder Plots code/ contains the Python scripts used to process HYDRUS outputs and generate the manuscript and supporting-information figures.
+
+Files in each HYDRUS schedule folder
+
+Each schedule folder contains the following main files:
+
+.hyd5
+HYDRUS project file for the corresponding wetting-draining simulation.
+Conc1.TXT
+HYDRUS output file containing dissolved oxygen concentration results.
+H.txt
+HYDRUS output file containing pressure head results.
+TH.txt
+HYDRUS output file containing water content results.
+V.txt
+HYDRUS output file containing velocity results.
+Meshtria.txt
+Mesh file used to define the HYDRUS computational grid.
+Plotting and post-processing scripts
+
+The Plots code/ folder contains Python scripts used to:
+
+read HYDRUS output files;
+extract oxygen concentration, pressure head, water content, and velocity data;
+calculate local Damköhler numbers;
+calculate recharge volume, vadose-zone storage, and recharge efficiency;
+generate the main-text and supporting-information figures.
+
+Some scripts may contain local file paths from the original analysis environment. These paths may need to be updated before running the scripts on another computer.
+
+Software
+
+The simulations were performed using HYDRUS (2D/3D). Python was used for post-processing and figure generation.
+
+The provided HYDRUS project files and processed outputs are intended to support review and reproducibility of the analyses presented in the manuscript. The files allow users to inspect the model setup, compare wetting-draining schedules, and reproduce the main figures and key post-processing calculations.
